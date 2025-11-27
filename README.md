@@ -21,7 +21,7 @@ A clean, responsive Product Preview Card component built using vanilla HTML and 
 1. **Clone or download the repository** (or copy the project folder locally):
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/syntaxSangoma/product-preview-card-04
 cd product-preview-card-04
 ```
 
