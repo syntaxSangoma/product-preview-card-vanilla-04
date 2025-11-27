@@ -151,6 +151,7 @@ a:focus {
 .product-card__old-price {
     font: var(--OLD-PRICE);
     color: var(--AUROMETAL-SAURUS);
+    text-decoration: line-through;
 }
 
 .product-card__addToCart {
