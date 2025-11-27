@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nkosinathi Dhanda">
+    <meta name="description" content="A clean, responsive Product Preview card built using vanilla HTML and CSS.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+</head>
+
+<body>
+    <main class="product-card">
+        <figure class="product-card__hero-image">
+            <img class="mobile-hero" src="./images/image-product-mobile.jpg" alt="image-product-mobile" width="686"
+                height="480">
+
+            <img class="responsive-image desktop-hero" src="./images/image-product-desktop.jpg"
+                alt="image-product-desktop" width="600" height="900">
+
+            <figcaption class="offscreen">image-product</figcaption>
+        </figure>
+
+        <section class="product-card__content">
+            <p class="product-card__category">perfume</p>
+
+            <h1 class="product-card__product-name">
+                Gabrielle Essence Eau De Parfum
+            </h1>
+
+            <p class="product-card__description">
+                A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House
+                of CHANEL.
+            </p>
+
+            <div class="product-card__price-group">
+                <p class="product-card__new-price">&dollar;149.99</p>
+                <p class="product-card__old-price">&dollar;169.99</p>
+            </div>
+
+            <button class="product-card__addToCart nowrap">
+                <figure class="product-card__cart-icon">
+                    <img src="./images/icon-cart.svg" alt="icon-cart" width="15" height="16">
+                    <figcaption class="offscreen">icon-cart</figcaption>
+                </figure>
+
+                Add to Cart
+            </button>
+        </section>
+    </main>
+</body>
+
+</html>

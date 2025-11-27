@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* || REST */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* || VARIABLES */
+:root {
+    /* COLORS */
+    --CREAM-BG: #F2EAE2;
+    --PURE-WHITE: #FFF;
+    --AUROMETAL-SAURUS: #6C7289;
+    --DEEP-AQUAMARINE: #3D8168;
+    --DEEP-AQUAMARINE-HVR: #1A4032;
+    --GUNMETAL: #1C232B;
+
+    /* TYPOGRAPHY */
+    --FF1: "Montserrat", sans-serif;
+    --FF2: "Fraunces", serif;
+
+    --DISPLAY: bold 2rem/2rem var(--FF2);
+    --BODY: 500 .875rem/1.4375rem var(--FF1);
+    --BUTTON-TEXT: bold .875rem var(--FF1);
+    --OVERLINE: 500 .75rem var(--FF1);
+    --OLD-PRICE: 500 .8125rem/1.4375rem var(--FF1);
+    --OVERLINE-LS: .3125rem;
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.center {
+    text-align: center;
+}
+
+.responsive-image {
+    display: none;
+}
+
+/* MOBILE FIRST DESIGN */
+/* || GENERAL STYLES */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: var(--CREAM-BG);
+    display: grid;
+    place-content: center;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: normal;
+}
+
+a:any-link {
+    text-decoration: none;
+    color: black;
+}
+
+a:focus {
+    outline: none;
+}
+
+/* || PRODUCT CARD */
+.product-card {
+    width: 343px;
+    min-height: 611px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--PURE-WHITE);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.product-card__hero-image {
+    width: 343px;
+    height: 240px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.mobile-hero {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-card__content {
+    padding: 1.5rem;
+    display: flex;
+    flex-flow: column;
+}
+
+.product-card__category {
+    text-transform: uppercase;
+    font: var(--OVERLINE);
+    letter-spacing: var(--OVERLINE-LS);
+    color: var(--AUROMETAL-SAURUS);
+    margin-bottom: .75rem;
+}
+
+.product-card__product-name {
+    font: var(--DISPLAY);
+    color: var(--GUNMETAL);
+    max-width: 295px;
+    margin-bottom: 1rem;
+}
+
+.product-card__description {
+    font: var(--BODY);
+    color: var(--AUROMETAL-SAURUS);
+    max-width: 295px;
+    margin-bottom: 1.5rem;
+}
+
+.product-card__price-group {
+    display: flex;
+    align-items: center;
+    gap: 1.1875rem;
+    margin-bottom: 1.25rem;
+}
+
+.product-card__new-price {
+    font: var(--DISPLAY);
+    color: var(--DEEP-AQUAMARINE);
+}
+
+.product-card__old-price {
+    font: var(--OLD-PRICE);
+    color: var(--AUROMETAL-SAURUS);
+}
+
+.product-card__addToCart {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+    align-self: center;
+    width: 295px;
+    height: 48px;
+    font: var(--BUTTON-TEXT);
+    color: var(--PURE-WHITE);
+    background-color: var(--DEEP-AQUAMARINE);
+    line-height: 3rem;
+    padding: 0rem 5.6875rem;
+    border-radius: 8px;
+    border: none;
+}
+
+.product-card__cart-icon img {
+    max-width: 14.39px;
+}
+
+@media screen and (min-width: 992px) {
+    .product-card {
+        width: 600px;
+        min-height: 450px;
+        flex-flow: row;
+    }
+
+    .product-card__hero-image {
+        width: 300px;
+        height: 450px;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .mobile-hero {
+        display: none;
+    }
+
+    .desktop-hero {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .product-card__content {
+        padding: 2rem 1.9688rem 2rem 2rem;
+    }
+
+    .product-card__category {
+        margin-bottom: 1.25rem;
+    }
+
+    .product-card__product-name {
+        max-width: 236px;
+        margin-bottom: 1.5rem;
+    }
+
+    .product-card__description {
+        max-width: 237px;
+        margin-bottom: 1.8125rem;
+    }
+
+    .product-card__price-group {
+        margin-bottom: 1.875rem;
+    }
+
+    .product-card__addToCart {
+        width: 236px;
+        padding: 0rem 3.875rem 0rem 3.9375rem;
+        transition: background-color 0.5s ease;
+        cursor: pointer;
+    }
+
+    .product-card__addToCart:hover {
+        background-color: var(--DEEP-AQUAMARINE-HVR);
+    }
+}
